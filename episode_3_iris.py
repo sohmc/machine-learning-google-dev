@@ -14,4 +14,14 @@ my_classifier.fit(X_train, y_train)
 predictions = my_classifier.predict(X_test)
 
 from sklearn.metrics import accuracy_score
+print "Prediction score using DecisionTreeClassifier"
+print accuracy_score(y_test, predictions)
+
+
+# Repeat using KNeighborClassifier
+from sklearn.neighbors import KNeighborsClassifier
+my_classifier.fit(X_train, y_train)
+
+predictions = my_classifier.predict(X_test)
+print "Prediction score using KNeighbor classifer"
 print accuracy_score(y_test, predictions)
